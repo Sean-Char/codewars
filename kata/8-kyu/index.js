@@ -1,3 +1,26 @@
+// Beginner Series #2 Clock
+function past(h, m, s){
+    return h * 3600000 + m * 60000 + s * 1000;
+  }
+
+
+// Invert values
+function invert(array) {
+    return array.map(value => value * -1)
+}
+
+
+// You Can't Code Under Pressure #1
+function doubleInteger(i) {
+    return i * 2;
+}
+
+// Beginner - Lost Without a Map
+function maps(x) {
+    return x.map(v => v * 2)
+}
+   
+
 // Abbreviate a Two Word Name
 function abbrevName(name){
     const nameArr = name.split(" ")
