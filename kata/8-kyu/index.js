@@ -1,3 +1,34 @@
+// Convert a Boolean to a String
+function booleanToString(b){
+    return b === true ? 'true' : 'false'
+}
+
+
+// Is he gonna survive?
+function hero(bullets, dragons){
+    return bullets >= dragons * 2
+}
+
+
+// Count of positives / sum of negatives
+function countPositivesSumNegatives(input) {
+    if (input === null || input.length < 1) {
+      return []
+    }
+    
+    let count = 0
+    let sum  = 0
+    for (let i = 0; i < input.length; i++) {
+      if (input[i] > 0) {
+        count++
+      }
+      else 
+        sum += input[i]
+    }
+    return [count , sum] 
+}
+
+
 // Beginner Series #2 Clock
 function past(h, m, s){
     return h * 3600000 + m * 60000 + s * 1000;
