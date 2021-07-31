@@ -1,3 +1,128 @@
+// DNA to RNA Conversion
+function DNAtoRNA(dna) {
+    let strArr = dna.split("")
+    for (let i = 0; i < strArr.length; i++) {
+      if (strArr[i] === "T") {
+        strArr[i] = "U"
+      }
+    }
+    return strArr.join("")
+}
+function DNAtoRNA(dna) {
+    return dna.replace(/T/gi, "U")
+}
+
+
+// You only need one - Beginner
+function check(a, x) {
+    return a.includes(x)
+}
+
+
+// MakeUpperCase
+function makeUpperCase(str) {
+    return str.toUpperCase()
+}
+
+
+// Find Maximum and Minimum Values of a List
+var min = function(list){
+    return Math.min(...list)
+}
+
+var max = function(list){
+    return Math.max(...list)
+}
+
+
+// Beginner Series #1 School Paperwork
+function paperwork(n, m) {
+    return n < 0 || m < 0 ? 0 : n * m
+}
+
+// Reversed sequence
+const reverseSeq = n => {
+    let result = []
+    let start = n
+    for (let i = start; i > 0; i--) {
+      result.push(i)
+    }
+    return result
+};
+
+
+// Array plus array
+function arrayPlusArray(arr1, arr2) {
+    let x = arr1.reduce((a, c) => a + c, 0)
+    let y = arr2.reduce((a, c) => a + c, 0)
+    return x + y
+}
+
+
+// Fake Binary
+function fakeBin(x) {
+    return x.split('').map(n => n < 5 ? 0 : 1).join('');
+}
+function fakeBin(x){
+    let result = []
+    let numArr = x.split("")
+    for (let i = 0; i < numArr.length; i++) {
+      let parsNum = parseInt(numArr[i])
+      if (parsNum < 5) {
+        result.push(0)
+      } 
+      else if (parsNum > 0) {
+        result.push(1)
+      }
+    }
+    return result.join("")
+}
+
+
+// Calculate BMI
+function bmi(weight, height) {
+    let calBMI = (weight) / (height * height)
+    if (calBMI <= 18.5 ) {
+      return "Underweight";
+    }
+    else if (calBMI <= 25.0) {
+      return "Normal";
+    }
+    else if (calBMI <= 30.0 ) {
+      return "Overweight";
+    }
+    else if (calBMI > 30 ) {
+      return "Obese";
+    }
+}
+
+// Sum Arrays
+function sum (numbers) {
+    return numbers.reduce((a, c) => a + c, 0)
+};
+
+
+// Count the Monkeys!
+function monkeyCount(n) {
+    let count = 0
+    let result = []
+    for (let i = 1; i <= n; i++) {
+      result.push(count =+ i)
+    }
+    return result
+}
+
+
+//Calculate average
+function find_average(array) {
+    let sum = 0
+    for (let i = 0; i < array.length; i++) {
+      sum += array[i]
+    }
+    return sum / array.length
+}
+
+
 // Convert a Boolean to a String
 function booleanToString(b){
     return b === true ? 'true' : 'false'
