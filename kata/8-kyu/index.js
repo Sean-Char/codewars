@@ -1,3 +1,152 @@
+// Quarter of the year
+const quarterOf = (month) => {
+    if (month <= 3) {
+      return 1
+    } else if (month <= 6) {
+      return 2
+    } else if (month <= 9) {
+      return 3
+    } else if (month <= 12) {
+      return 4
+    }
+}
+
+
+// Sentence Smash
+function smash (words) {
+    "use strict";
+  return words.join(" ")
+    
+};
+
+
+// Function 3 - multiplying two numbers
+function multiply(a , b) {
+    return a * b
+}
+
+
+// Sum Mixed Array
+function sumMix(x){
+    return x.reduce((a,c) => a + parseInt(c), 0)
+}
+
+
+//How good are you really?
+function betterThanAverage(classPoints, yourPoints) {
+    let avg = classPoints.reduce((acc, cur) => acc + cur, 0) / classPoints.length
+    return yourPoints > avg ? true : false
+}
+
+
+// Transportation on vacation
+function rentalCarCost(d) {
+    let costPerDay = 40
+    let totalCost = costPerDay * d
+    if (d >= 7) {
+          totalCost -= 50
+      }
+      else if (d >= 3) {
+          totalCost -= 20
+      }
+      return totalCost
+}
+
+
+// Remove exclamation marks
+function removeExclamationMarks(s) {
+    return s.split("!").join("")
+}
+
+
+// Grasshopper - Personalized Message
+function greet (name, owner) {
+    if(name === owner) {
+      return 'Hello boss'
+    }
+    return 'Hello guest'
+}
+
+
+// Sum without highest and lowest number
+function sumArray(array) {
+    if (!array) {
+          return 0
+    }
+    let ordArr = array.sort((a,b) => a-b)
+    ordArr.shift()
+    ordArr.pop()
+    let sum = 0
+    for (let i = 0; i < ordArr.length; i++) {
+      sum += ordArr[i]
+    }
+    return sum
+}
+
+
+// Find the first non-consecutive number
+function firstNonConsecutive (arr) {   
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i - 1] + 1 !== arr[i]) return arr[i];
+    }
+    return null;
+}
+
+
+// Get Planet Name By ID
+function getPlanetName(id){
+    var name;
+    switch(id){
+      case 1:
+        name = 'Mercury'
+        break;
+      case 2:
+        name = 'Venus'
+        break;
+      case 3:
+        name = 'Earth'
+        break;
+      case 4:
+        name = 'Mars'
+        break;
+      case 5:
+        name = 'Jupiter'
+        break;
+      case 6:
+        name = 'Saturn'
+        break;
+      case 7:
+        name = 'Uranus'
+        break;
+      case 8:
+        name = 'Neptune'
+    }
+    
+    return name;
+}
+
+// Will you make it?
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+    let cal = mpg * fuelLeft
+    return cal >= distanceToPump ? true : false
+};
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+    return distanceToPump / mpg <= fuelLeft
+};
+ 
+
+// Beginner - Reduce but Grow
+function grow(x){
+    return x.reduce((acc, curr) => acc * curr)
+}
+
+
+// Array plus array
+function arrayPlusArray(arr1, arr2) {
+    return arr1.concat(arr2).reduce((a, c) => a + c, 0)
+}
+
+
 // DNA to RNA Conversion
 function DNAtoRNA(dna) {
     let strArr = dna.split("")
@@ -27,12 +176,14 @@ function makeUpperCase(str) {
 
 // Find Maximum and Minimum Values of a List
 var min = function(list){
-    return Math.min(...list)
+    return Math.min(...list) // 
 }
 
 var max = function(list){
     return Math.max(...list)
 }
+//max([4,6,2,1,9,63,-134,566]) returns 566
+//min([-52, 56, 30, 29, -54, 0, -110]) returns -110
 
 
 // Beginner Series #1 School Paperwork
@@ -56,6 +207,9 @@ function arrayPlusArray(arr1, arr2) {
     let x = arr1.reduce((a, c) => a + c, 0)
     let y = arr2.reduce((a, c) => a + c, 0)
     return x + y
+}
+function arrayPlusArray(arr1, arr2) {
+    return arr1.concat(arr2).reduce((a, c) => a + c, 0)
 }
 
 
