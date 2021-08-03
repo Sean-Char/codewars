@@ -1,3 +1,114 @@
+// Third Angle of a Triangle
+function otherAngle(a, b) {
+    return 180 - (a + b)
+}
+
+
+// Grasshopper - Messi goals function
+function goals (laLigaGoals, copaDelReyGoals, championsLeagueGoals) {
+    return laLigaGoals + copaDelReyGoals + championsLeagueGoals
+}
+
+
+// Expressions Matter
+function expressionMatter(a, b, c) {
+    return Math.max(a + b + c, a * b * c, (a + b) * c, a * (b + c))
+}
+function expressionMatter(a, b, c) {
+    let result1
+    let result2
+    let result3
+    let result4
+    let result5
+    
+    result1 = a * (b + c)
+    result2 = a * b * c
+    result3 = a + b * c
+    result4 = (a + b) * c
+    result5 = a + b + c
+    
+    return Math.max(result1, result2, result3, result4, result5)
+}
+
+
+// Grasshopper - Messi Goals
+var laLigaGoals = 43
+var championsLeagueGoals = 10
+var copaDelReyGoals = 5
+
+var totalGoals = laLigaGoals + championsLeagueGoals + copaDelReyGoals
+
+
+// Will there be enough space?
+function enough(cap, on, wait) {
+    return Math.max(wait + on - cap,0)
+}
+
+
+// Beginner Series #4 Cockroach
+function cockroachSpeed(s) {
+    return cal = Math.floor(s * 27.7778)
+}
+
+
+// Opposites Attract
+function lovefunc(flower1, flower2){
+    return flower1 % 2 !== flower2 % 2
+}
+
+
+// Grasshopper - Grade book
+function getGrade (s1, s2, s3) {
+    let score = (s1 + s2 + s3) / 3
+    
+    if (score >= 90) {
+      return 'A'
+    }
+    else if (score >= 80) {
+      return 'B'
+    }
+    else if (score >= 70) {
+      return 'C'
+    }
+    else if (score >= 60) {
+      return 'D'
+    }
+    else {
+      return 'F'
+    }
+}
+
+
+// If you can't sleep, just count sheep!!
+var countSheep = function (num){
+    let string = ''
+    for (let i = 1; i <= num; i++) {
+      string += `${i} sheep...`
+    }
+    return string
+}
+
+
+// Convert a string to an array
+function stringToArray(string){
+    return string.split(" ")
+}
+
+
+// Volume of a Cuboid
+class Kata {
+    static getVolumeOfCuboid(length, width, height) {
+      return length * width * height
+    }
+}
+
+
+// L1: Set Alarm
+function setAlarm(employed, vacation){
+    return employed === true && vacation === false ? true : false
+}
+
+
 // Quarter of the year
 const quarterOf = (month) => {
     if (month <= 3) {
