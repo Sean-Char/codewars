@@ -1,3 +1,85 @@
+// N-th Power
+function index(array, n){
+  for (let i = 0; i < array.length; i++) {
+    if (n < array.length) {
+      return Math.pow(array[n], n)
+    }
+  }
+  return -1
+}
+function index(array, n){
+  return n < array.length ? Math.pow(array[n], n) : -1
+}
+
+
+// Area or Perimeter
+const areaOrPerimeter = function(l , w) {
+  if (l === w) return l * w
+  return 2 * (l + w)
+};
+
+// Function 2 - squaring an argument
+const square = (num) => {
+  return Math.pow(num,2)
+}
+
+
+// Is the string uppercase?
+String.prototype.isUpperCase = function() {
+  return this.toString() === this.toUpperCase()
+}
+
+
+// altERnaTIng cAsE <=> ALTerNAtiNG CaSe
+String.prototype.toAlternatingCase = function () {
+  return this.split("").map(val => val === val.toUpperCase() ? val.toLowerCase() : val.toUpperCase()).join("")
+}
+
+
+// Rock Paper Scissors!
+const rps = (p1, p2) => {
+  if (p1 === p2) return "Draw!";
+  var rules = {
+// side A |  side B
+    rock: "scissors",
+    paper: "rock", 
+    scissors: "paper"};
+  // bracket notation takes in a string for objects to access the value
+  console.log(rules["scissors"]) // paper
+  console.log(rules.rock) // scissors
+
+  if (p2 === rules[p1]) {
+    return "Player 1 won!";
+  }
+  else {
+    return "Player 2 won!";
+  }
+};
+const rps = (p1, p2) => {
+  if(p1 === 'scissors' && p2 === 'paper') {
+     return 'Player 1 won!'
+  }
+  else if(p1 === 'paper' && p2 === 'rock') {
+    return 'Player 1 won!'
+  }
+  else if(p1 === 'rock' && p2 === 'scissors') {
+    return 'Player 1 won!'
+  }
+  else if(p2 === 'scissors' && p1 === 'paper') {
+     return 'Player 2 won!'
+  }
+  else if(p2 === 'paper' && p1 === 'rock') {
+    return 'Player 2 won!'
+  }
+  else if(p2 === 'rock' && p1 === 'scissors') {
+    return 'Player 2 won!'
+  }
+  else {
+    return 'Draw!'
+  }
+};
+
+
 // Third Angle of a Triangle
 function otherAngle(a, b) {
     return 180 - (a + b)
