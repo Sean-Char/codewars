@@ -1,3 +1,139 @@
+// Squash the bugs - return the longest string from the string array
+function findLongest(str) {
+  
+  var spl = str.split(" ");
+  var longest = 0
+  
+  for (let i = 0; i < spl.length; i++) {
+
+    if (spl[i].length > longest) {
+      longest = spl[i].length
+    }
+  }
+  return longest
+}
+
+
+// Difference of Volumes of Cuboids
+function findDifference(a, b) {
+  let x = a.reduce((acc, cur) => acc * cur)
+  let y = b.reduce((acc, cur) => acc * cur)
+  return Math.abs(x-y)
+}
+
+
+// Grasshopper - Debug sayHello
+function sayHello(name) {
+  return `Hello, ${name}`
+}
+
+
+// Correct the mistakes of the character recognition software
+function correct(string)
+{
+  let char = {
+    5: 'S',
+    0: 'O',
+    1: 'I'
+  }
+  
+  let strArr = string.split("")
+  for (let i = 0; i < strArr.length; i++){
+    if (strArr[i] === "5") {
+      strArr[i] = char[5]
+    }
+    else if (strArr[i] === "0") {
+      strArr[i] = char[0]
+    }
+    else if (strArr[i] === "1") {
+      strArr[i] = char[1]
+    }
+  }
+  return strArr.join("")
+}
+
+
+// I love you, a little , a lot, passionately ... not at all
+function howMuchILoveYou(nbPetals) {
+  let phrase = ['I love you',
+        'a little',
+        'a lot',
+        'passionately',
+        'madly',
+        'not at all'] 
+  return phrase[(nbPetals-1) % 6]
+}
+
+
+// Is it even?
+function testEven(n) {
+  return n % 2 === 0 ? true : false
+}
+
+
+// Regular Ball Super Ball
+class Ball {
+  constructor(ballType = 'regular') {
+    this.ballType = ballType;
+  }
+}
+
+
+// Switch it Up!
+function switchItUp(number){
+  return nums = ({
+    0: "Zero",
+    1: "One",
+    2: "Two",
+    3: "Three",
+    4: "Four",
+    5: "Five", 
+    6: "Six",
+    7: "Seven",
+    8: "Eight",
+    9: "Nine"
+  })[number]
+}
+
+
+// Watermelon
+function divide(weight){
+  return weight > 2 && weight % 2 === 0
+}
+
+
+// How many lightsabers do you own?
+function howManyLightsabersDoYouOwn(name) {
+  return name === "Zach" ? 18 : 0
+}
+
+
+// Keep up the hoop
+function hoopCount (n) {
+  return n>=10 ? "Great, now move on to tricks" : "Keep at it until you get it"
+}
+
+
+// The Feast of Many Beasts
+function feast(beast, dish) {
+  return beast[0] === dish[0] && beast[beast.length - 1] === dish[dish.length - 1]
+}
+
+
+// Thinkful - Logic Drills: Traffic light
+function updateLight(current) {
+  if(current === "green"){
+    return "yellow"
+  }
+  else if(current === "yellow") {
+    return "red"
+  }
+  else if(current === "red") {
+    return "green"
+  }
+}
+
+
 // N-th Power
 function index(array, n){
   for (let i = 0; i < array.length; i++) {
