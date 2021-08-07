@@ -1,3 +1,67 @@
+
+// Grasshopper - Terminal game move function
+function move (position, roll) {
+  // return the new position
+  return position += roll * 2
+}
+
+
+// Filling an array (part 1)
+function arr(n){
+  var newArr = [];
+  for(var i = 0; i < n; i++){
+    newArr.push(i);
+  }
+  return newArr;
+}
+
+
+
+// Sort and Star
+function twoSort(s) {
+  let revStr = s.sort()
+  let x = revStr[0]
+  return x.split('').join('***')
+}
+
+
+// Exclusive "or" (xor) Logical Operator
+function xor(a, b) {
+  return a !== b
+}
+
+
+// All Star Code Challenge #18
+function strCount(str, letter){  
+  let count = 0
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === letter) {
+      count++
+    }
+  }
+  return count || 0
+}
+
+
+// Twice as old
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return Math.abs(dadYearsOld - 2 * sonYearsOld)
+}
+
+
+// Cat years, Dog years
+var humanYearsCatYearsDogYears = function(humanYears) {
+  let catYears, dogYears;
+  if (humanYears === 1) return [1, 15, 15];
+  else if (humanYears === 2) return [2, 24, 24];
+  else {
+    catYears = 4 * (humanYears - 2) + 24;
+    dogYears = 5 * (humanYears - 2) + 24;
+    return [humanYears, catYears, dogYears];
+  }
+}
+
+
 // Squash the bugs - return the longest string from the string array
 function findLongest(str) {
   
