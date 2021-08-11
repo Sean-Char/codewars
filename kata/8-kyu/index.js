@@ -1,3 +1,72 @@
+// Grasshopper - Check for factor
+function checkForFactor (base, factor) {
+  return base % factor === 0 ? true : false
+}
+
+
+// Palindrome Strings
+function isPalindrome(line) {
+  return String(line) === String(line).split('').reverse().join('')
+}
+
+
+// The 'if' function
+function _if(bool, func1, func2) {
+  return bool ? func1() : func2()
+}
+
+
+// Holiday VIII - Duty Free
+function dutyFree(normPrice, discount, hol){
+  let calDiscount = (normPrice * discount) / 100
+  let bottles = hol / calDiscount
+  return Math.floor(bottles)
+}
+
+
+// The Wide-Mouthed frog!
+function mouthSize(animal) {
+  return animal.toLowerCase() === "alligator" ? "small" :  "wide"
+}
+
+
+// Sum The Strings
+function sumStr(a,b) {
+  return (Number(a) + Number(b)).toString()
+}
+
+
+// Drink about
+function peopleWithAgeDrink(age) {
+  let drink = 'drink'
+  if(age < 14)
+    drink += ' toddy';
+  else if(age < 18)
+    drink += ' coke'
+  else if(age < 21)
+    drink += ' beer';
+  else if(age => 21)
+    drink += ' whisky';
+
+  return drink;
+}
+
+
+// What's the real floor?
+function getRealFloor(n) {
+  if (n === 0) return n
+  else if (n < 0) return n
+  else if (n < 13) return n - 1
+  else if (n >= 13) return n - 2
+}
+
+
+// Filter out the geese
+function gooseFilter (birds) {
+  var geese = ["African", "Roman Tufted", "Toulouse", "Pilgrim", "Steinbacher"];
+  return birds.filter(bird => !geese.includes(bird))
+}
+
 
 // Grasshopper - Terminal game move function
 function move (position, roll) {
@@ -14,7 +83,6 @@ function arr(n){
   }
   return newArr;
 }
-
 
 
 // Sort and Star
