@@ -1,3 +1,60 @@
+// Swap Values
+function swapValues(args) {
+  let temp = args[0];
+  args[0] = args[1];
+  args[1] = temp;
+}
+
+
+// Alan Partridge II - Apple Turnover
+function apple(x){
+  let myNum = Number(x)
+  if (Math.pow(myNum, 2) > 1000) {
+    return "It's hotter than the sun!!"
+  }
+  else {
+    return "Help yourself to a honeycomb Yorkie for the glovebox."
+  }
+}
+
+
+// get character from ASCII Value
+function getChar(c){
+  return String.fromCharCode(c)
+}
+
+
+// Well of Ideas - Easy Version
+function well(x){
+  let goodCount = 0
+  for (let ideas of x) {
+    if (ideas === 'good') {
+      goodCount++
+    }
+  }
+  
+  if (goodCount > 0 && goodCount <= 2) {
+    return 'Publish!'
+  }
+  else if (goodCount > 2) {
+    return 'I smell a series!'
+  }
+  else {
+    return 'Fail!'
+  }
+}
+
+
+// Powers of 2
+function powersOfTwo(n){
+  let results = []
+  for (let i = 0; i <= n; i++) {
+    results.push(Math.pow(2, i))
+  }
+  return results
+}
+
+
 // Grasshopper - Check for factor
 function checkForFactor (base, factor) {
   return base % factor === 0 ? true : false
