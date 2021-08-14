@@ -1,3 +1,46 @@
+// Reverse List Order
+function reverseList(list) {
+  return list.reverse()
+}
+
+
+// Surface Area and Volume of a Box
+function getSize(width, height, depth) {
+  let volume = width * height * depth
+  let area = 2*(height * width) + 2*(height * depth) + 2*(width*depth)
+  return [area, volume]
+}
+
+
+// A wolf in sheep's clothing
+function warnTheSheep(queue) {
+  if (queue[queue.length - 1] === "wolf") {
+    return `Pls go away and stop eating my sheep`
+  }
+  else {
+    let index = queue.findIndex(v => v === "wolf")
+    return `Oi! Sheep number ${queue.length - index - 1}! You are about to be eaten by a wolf!`
+  }
+}
+
+
+// Remove duplicates from list
+function distinct(a) {
+  return [...new Set(a)]
+}
+
+
+// Hello, Name or World!
+function hello(name) {
+  if (name === "" || name === null || name === undefined) {
+    return "Hello, World!"
+  }
+  let str = name.toLowerCase()
+  return `Hello, ${str.charAt(0).toUpperCase() + str.slice(1)}!`;
+}
+
+
+
 // Swap Values
 function swapValues(args) {
   let temp = args[0];
