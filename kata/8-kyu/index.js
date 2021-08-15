@@ -1,3 +1,108 @@
+// L1: Bartender, drinks!
+const drinks = {
+  "jabroni": "Patron Tequila",
+  "school counselor": "Anything with Alcohol",
+  "programmer": "Hipster Craft Beer",
+  "bike gang member": "Moonshine",
+  "politician": "Your tax dollars",
+  "rapper": "Cristal"
+}
+function getDrinkByProfession(param){
+return drinks[param.toLowerCase()] || "Beer"
+}
+
+function getDrinkByProfession(param){
+  let strArr = param.toLowerCase().split(" ")
+  const result = strArr.map(v => v.charAt(0).toUpperCase() + v.slice(1)).join(" ")
+
+  if (result === "Jabroni") {
+    return "Patron Tequila"
+  }
+  else if (result === "School Counselor") {
+    return "Anything with Alcohol"
+  }
+  else if (result === "Programmer") {
+    return "Hipster Craft Beer"
+  }
+  else if (result === "Bike Gang Member") {
+    return "Moonshine"
+  }
+  else if (result === "Politician") {
+    return "Your tax dollars"
+  }
+  else if (result === "Rapper") {
+    return "Cristal"
+  }
+  return "Beer"
+}
+
+
+// Student's Final Grade
+function finalGrade (exam, projects) {
+  if (exam > 90 || projects > 10) {
+    return 100
+  }
+  if (exam > 75 && projects >= 5) {
+    return 90
+  } 
+  if (exam > 50 && projects >= 2) {
+    return 75
+  }
+    return 0
+}
+
+
+// Plural
+function plural(n) {
+  return n !== 1
+}
+function plural(n) {
+  return n === 0 || n < 1 || n > 1 ? true : false
+}
+
+
+// Sleigh Authentication
+class Sleigh {
+  authenticate(name, password) {
+    return name === 'Santa Claus' && password === 'Ho Ho Ho!'
+  }
+}
+
+function Sleigh() {
+  this.name = "Santa Claus";
+  this.password = "Ho Ho Ho!";
+}
+Sleigh.prototype.authenticate = function(name, password) {
+  return this.name == name && this.password == password;
+}
+
+
+// No zeros for heros
+function noBoringZeros(n) {
+  let strNum = n.toString()
+  return Number(strNum.replace(/0+$/, ''))
+}
+
+
+// Check the exam
+function checkExam(array1, array2) {
+  let points = 0
+  
+  for (let i = 0; i < array2.length; i++) {
+    if (array2[i] === "") {
+      points += 0
+    }
+    else if (array2[i] === array1[i]) {
+      points += 4
+    }
+    else {
+      points += -1
+    }
+  }
+  return points > 0 ? points : 0
+}
+
+
 // Reverse List Order
 function reverseList(list) {
   return list.reverse()
