@@ -1,3 +1,47 @@
+// Gravity Flip
+const flip=(d, a)=>{
+  if(d === 'R') return a.sort((a,b)=>a-b);
+  if(d === 'L') return a.sort((a,b)=>b-a);
+}
+const flip=(d, a)=>{
+  if (d === "R") {
+    return a.sort((a,b) => a - b)
+  }
+  return a.sort((a,b) => b - a)
+}
+
+// Hex to Decimal
+function hexToDec(hexString){
+  return parseInt(hexString, 16)
+}
+
+
+// Lario and Muigi Pipe Problem
+function pipeFix(numbers){
+  var first = numbers[0];
+  var last = numbers[numbers.length-1];
+  
+  var arr = [];
+  for(var i = first; i <= last; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
+
+
+// Capitalization and Mutability
+function capitalizeWord(word) {
+  return word[0].toUpperCase() + word.slice(1);
+}
+
+
+// Training JS #1: create your first JS function and print "Helloworld!"
+function helloWorld() {
+  var str = "Hello World!"
+  console.log(str)
+}
+
+
 // L1: Bartender, drinks!
 const drinks = {
   "jabroni": "Patron Tequila",
