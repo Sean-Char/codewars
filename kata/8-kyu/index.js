@@ -1,3 +1,64 @@
+// 5 without numbers !!
+function unusualFive() {
+  let i = "hello"
+  return i.length
+}
+
+
+// Grasshopper - Terminal game combat function
+function combat(health, damage) {
+  let newHealth = health - damage
+  if (newHealth < 0 ) {
+    return 0
+  }
+  return newHealth
+}
+
+
+// Training JS #7: if..else and ternary operator
+function saleHotdogs(n){
+  let total = 0
+  if (n<5) {
+    total += n * 100
+  }
+  else if (n>=5 && n<10) {
+    total += n * 95
+  }
+  else if (n>=10) {
+    total += n * 90
+  }
+  return total
+}
+
+
+// Pre-FizzBuzz Workout #1
+function preFizz(n) {
+  let result = []
+  for(let i = 1; i <= n; i++ ) {
+    result.push(i)
+  }
+  return result
+}
+
+
+// Exclamation marks series #11: Replace all vowel to exclamation mark in the sentence
+function replace(s){
+  return s.replace(/a|e|i|o|u/gi, "!")
+}
+
+
+// Grasshopper - Function syntax debugging
+function main (verb, noun) {
+  return verb + noun
+}
+
+
+// Enumerable Magic #25 - Take the First N Elements
+function take(arr, n) {
+  return arr.slice(0, n)
+}
+
+
 // Gravity Flip
 const flip=(d, a)=>{
   if(d === 'R') return a.sort((a,b)=>a-b);
