@@ -1,3 +1,33 @@
+// Color Ghost
+var Ghost = function() {
+  var colors = ["white", "yellow", "purple", "red"];
+  var colorIndex = Math.floor(Math.random() * (colors.length));
+  this.color = colors[colorIndex];
+};
+
+
+// Smallest unused ID (Missing number)
+function nextId(ids){
+  let num = 0
+  // validate if num exist 
+  while (ids.includes(num)) {
+    // if true add 1 to the number and loop again
+    num += 1
+  }
+  // if false return the number
+  return num
+}
+
+
+// To square(root) or not to square(root)
+function squareOrSquareRoot(array) {
+  return array.map(x => {
+    const r = Math.sqrt(x);
+    return (r % 1 == 0) ? r : (x*x);
+  });  
+}
+
+
 // 5 without numbers !!
 function unusualFive() {
   let i = "hello"
