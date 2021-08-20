@@ -1,3 +1,116 @@
+// Formatting decimal places #0
+function twoDecimalPlaces(n) {
+  return Number(n.toFixed(2))
+}
+
+
+// Thinkful - Number Drills: Pixelart planning
+function isDivisible(wallLength, pixelSize){
+  return wallLength%pixelSize===0;
+}
+
+
+// Bin to Decimal
+function binToDec(bin){
+  return parseInt(bin, 2)
+}
+
+
+/*  Enumerable Magic #3 - Does My List Include This?
+    concept: check if a value is in the array, return t or f
+    use the Array helper function includes()
+*/
+function include(arr, item){
+  return arr.includes(item)
+}
+
+
+// Grasshopper - Variable Assignment Debug
+var a = "dev"
+var b = "Lab"
+
+var name = a + b
+
+
+// Is it a palindrome?
+/*  concept:  check if the string reflect itself (Palindrome)
+    
+    take the string and lowercase it
+    turn the string into an array 
+    use the Array function|methods - reverse() and join() to turn it
+    to a string again
+    compare it to the original
+    
+*/
+function isPalindrome(x) {
+  let str = x.toLowerCase().split("").reverse().join("")
+	console.log(str)
+  return x.toLowerCase() === str
+}
+
+
+// Exclamation marks series #1: Remove a exclamation mark from the end of string
+function remove(s){
+  return s.replace(/!$/gi, "")
+}
+
+
+// Basic subclasses - Adam and Eve
+class God{
+  /**
+   * @returns Human[]
+   */
+    static create(){
+      return [new Man(), new Woman()]
+    }
+  }
+  
+  class Human {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+  
+  class Man extends Human {
+    constructor(name) {
+      super(name) 
+    }
+  }
+  
+  class Woman extends Human {
+    constructor(name) {
+      super(name)
+    }
+}
+
+
+// Kata Example Twist
+let websites = new Array(1000).fill('codewars')
+
+
+// Determine offspring sex based on genes XX and XY chromosomes
+function chromosomeCheck(sperm) {
+  if (sperm === 'XY') {
+    return "Congratulations! You're going to have a son."
+  }
+  return "Congratulations! You're going to have a daughter."
+}
+
+
+// Basic Training: Add item to an Array
+websites.push("codewars")
+
+
+// Convert to Binary
+function toBinary(n){
+  return parseInt(n.toString(2))
+}
+
+
+// Mr. Freeze
+Object.freeze(MrFreeze)
+
+
 // Color Ghost
 var Ghost = function() {
   var colors = ["white", "yellow", "purple", "red"];
