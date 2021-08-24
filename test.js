@@ -189,6 +189,48 @@ function findLongestSubstring(str) {
 }
 
 
+function binarySearch(arr, num){
+  let start = 0;
+  let end = arr.length-1
+  
+  for (let i = 0; i < arr.length; i++) {
+      let mid = Math.floor((start+end)/2)
+      if (arr[mid] < num) {
+          start++
+      } else if (arr[mid] > num) {
+          end--;
+      } else {
+          return mid;
+      }
+  }
+  return -1;
+}
+
+function naiveSearch(long, short){
+  var count = 0;
+  for(var i = 0; i < long.length; i++){
+      for(var j = 0; j < short.length; j++){
+         if(short[j] !== long[i+j]) break;
+         if(j === short.length - 1) count++;
+      }
+  }
+  return count;
+}
+
+naiveSearch("lorie loled", "lol")
+
+
+
+function remove(s,n){
+  let input = s;
+  while (n) {
+  input = input.replace(/!/, "");
+  n-=1;
+  }
+  return input;
+}
+
+
 
 
 

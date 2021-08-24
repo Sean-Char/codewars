@@ -1,3 +1,55 @@
+// Tip Calculator
+const TIPS = {
+  "terrible": 0.0,
+  "poor": 0.05,
+  "good": 0.1,
+  "great": 0.15,
+  "excellent": 0.2
+};
+
+const calculateTip = (amount, rating) => {
+  rating = rating.toLowerCase();
+  
+  return rating in TIPS ? Math.ceil(TIPS[rating] * amount) : "Rating not recognised";
+};
+
+
+// Take the Derivative
+function derive(coefficient,exponent) {
+  let num1 = coefficient * exponent
+  let num2 = exponent - 1
+  return `${num1}x^${num2}`
+}
+
+
+// Add Length
+function addLength(str) {
+  return str.split(" ").map(v => `${v} ${v.length}`)
+}
+
+
+// Exclamation marks series #6: Remove n exclamation marks in the sentence from left to right
+function remove(s,n){
+  for (var i=0;i<n;i++) {
+    s=s.replace("!","")
+  } 
+  return s;
+}
+
+
+// Grasshopper - Array Mean
+var findAverage = function (nums) {
+  let sum = nums.reduce((acc, cur) => acc + cur)
+  return sum / nums.length
+}
+
+
+// Regexp Basics - is it a digit?
+String.prototype.digit = function() {
+  return /^[0-9]$/gi.test(this)
+};
+
+
 // Find Multiples of a Number
 function findMultiples(integer, limit) {
   let arr = []
