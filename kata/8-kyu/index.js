@@ -1,3 +1,99 @@
+// Get the Middle Character
+function getMiddle(s){
+  let oddMiddle = ((s.length + 1) / 2) - 1
+  let evenMiddle = s.length / 2
+  
+  if (s.length % 2 ===0) {
+    return `${s[evenMiddle -1]}${s[evenMiddle]}`
+  }
+  return `${s[oddMiddle]}`
+}
+/* 
+even - "test" = "es"
+odd - "testing" = "t"
+*/
+
+
+// Square Every Digit
+function squareDigits(num){
+  let strNum = num.toString()
+  let arrNum = strNum.split('')
+  let r = arrNum.map(num => Number(num * num)).join('')
+  return Number(r)
+}
+/* 
+9*9 = 81
+1*1 = 1
+*/
+
+
+// Disemvowel Trolls
+function disemvowel(str) {
+  return str.replace(/[aeiou]/gi, '');
+}
+
+// Is it a number?
+function isDigit(s) {
+  return s==parseFloat(s);
+}
+
+
+// Holiday VI - Shark Pontoon
+function shark(pontoonDistance, sharkDistance, youSpeed, sharkSpeed, dolphin){
+  return pontoonDistance * sharkSpeed < youSpeed * sharkDistance * (dolphin ? 2 : 1) ? "Alive!" : "Shark Bait!"
+}
+
+// Thinkful - Number Drills: Blue and red marbles
+function guessBlue(blueStart, redStart, bluePulled, redPulled) {
+  return ((blueStart - bluePulled)/(blueStart + redStart - bluePulled - redPulled))
+}
+
+
+// Multiple of index
+function multipleOfIndex(array) {
+  return array.filter((val, idx) => val % idx === 0)
+}
+// [22, -6, 32, 82, 9, 25] => [-6, 32, 25]
+//[68, -1, 1, -7, 10, 10] => [-1, 10]
+
+
+// Classic Hello World
+class Solution{
+  static main() {
+    console.log("Hello World!")
+  }
+}
+
+
+// repeatIt
+var repeatIt = function(str, n) {
+  if(typeof str !== "string") {
+    return "Not a string"
+  }
+  return str.repeat(n)
+}
+
+
+// Find the position!
+function position(letter){
+  const num = parseInt(letter, 36) - 9
+  return `Position of alphabet: ${num}`
+}
+
+
+// Training JS #5: Basic data types--Object
+function animal(obj){
+  return `This ${obj.color} ${obj.name} has ${obj.legs} legs.`
+}
+
+
+// How many stairs will Suzuki climb in 20 years?
+function stairsIn20(s){
+  return s.reduce((steps, day) => steps.concat(day))
+          .reduce((sum, count) => sum + count) * 20
+}
+
+
 // Tip Calculator
 const TIPS = {
   "terrible": 0.0,
@@ -6,7 +102,6 @@ const TIPS = {
   "great": 0.15,
   "excellent": 0.2
 };
-
 const calculateTip = (amount, rating) => {
   rating = rating.toLowerCase();
   
